@@ -1,74 +1,57 @@
 {
-  "A. Opdrachtvoorbereidig, commercieel":{
-    "categorie":"A"
-  },
-  "B. Opdrachtvoorbereidig, technisch":{
-    "categorie":"B"
-  },
-  "C. Vloeren":{
-    "categorie":"C",
-    "vloersoorten":{
-      "geen vloer":{
-        "omschrijving":"Geen vloer"
-      },
-      "tapijttegels op beursvloer":{
-        "omschrijving":"Tapijttegels op beursvloer"
-      },
-      "tapijt op beursvloer":{
-        "omschrijving":"Tapijt op beursvloer"
-      },
-      "hpl op beursvloer":{
-        "omschrijving":"HPL op beursvloer"
-      },
-      "dubbelspaanvloer":{
-        "omschrijving":"Dubbelspaanvloer"
-      },
-      "octanorm vloer":{
-        "omschrijving":"Octanorm vloer"
-      },
-      "kepervloer":{
-        "omschrijving":"Kepervloer",
+  "formule":{
+    "A. Opdrachtvoorbereidig, commercieel":{
+      "categorie":"A"
+    },
+    "B. Opdrachtvoorbereidig, technisch":{
+      "categorie":"B"
+    },
+    "C. Vloeren":{
+      "categorie":"C",
+      "vloersoorten":{
+        "geen vloer":{
+          "omschrijving":"Geen vloer"
+        },
+        "tapijttegels op beursvloer":{
+          "omschrijving":"Tapijttegels op beursvloer"
+        },
+        "tapijt op beursvloer":{
+          "omschrijving":"Tapijt op beursvloer"
+        },
+        "hpl op beursvloer":{
+          "omschrijving":"HPL op beursvloer"
+        },
+        "dubbelspaanvloer":{
+          "omschrijving":"Dubbelspaanvloer"
+        },
+        "octanorm vloer":{
+          "omschrijving":"Octanorm vloer"
+        },
         "kepervloer":{
-          "kepers":{
-            "Fasen":{
-              "Voorbereiding":{},
-              "Realisatie":{},
-              "Transport, heen":{},
-              "Opbouw":{},
-              "Evenement":{},
-              "Demontage":{},
-              "Transport, retour":{},
-              "Logistiek":{},
-              "Afronding":{}
-            }
-          },
-          "platen":{},
-          "verzwaringen":{},
-          "uitsparingen":{},
-          "bekabeling":{},
-          "randafwerking":{
-            "plint":{
-              "toelichting":"Standaard worden plinten per project, intern door CE geproduceerd. Remo merkte op 2 december 2019 op dat het produceren van plinten eventueel ook op voorraad plaats kan vinden.",
-              "realisatiemethode vastellen": "functie",
-              "intern op projectbasis":{
+          "omschrijving":"Kepervloer",
+          "kepervloer":{
+            "bestanddelen":{
+              "kepers":{
+                "type":"halffabrikaat",
+                "verplicht": true,
                 "fasen":{
                   "voorbereiding":{},
                   "realisatie":{
-                    "toelichting":"Voor ieder project worden nieuwe plinten gezaagd. Na afloop van een project worden de oude plinten weggegooid. Op de stuklijst staat de m1 maat welke exact nodig is. Dit is echter niet de maat welke meegaat naar de beurs. ",
+                    "toelichting":"",
                     "werkzaamheden":{
-                        "spec1": {
-                          "id":"0025",
-                          "omschrijving":"Lezen stuklijst",
-                          "duur": 5
+                        "1": {
+                          "omschrijving":"Lezen stuklijst en controleren maten in de stuklijst. John heeft de indruk dat nog steeds 50% van de maten / kepers in de stuklijst niet correct is (of optimaler kan). John kijkt zelf in de tekening en telt het zelf uit. Als er meerdere timmerlieden bezig zijn met hetzelfde project, geeft hij niet de stuklijst mee maar schrijft hij het op een blaadje. Als John afwijkt van de stuklijst, geeft hij dit altijd door. Omstandigheid met John en Oscar samen bespreken. ",
+                          "vaardigheidsniveau": ["chef", "assistent", "voorman"],
+                          "duur": 5,
+                          "tarief": 45
                         },
-                        "spec2": {
-                          "id":"0025",
-                          "omschrijving":"Lezen stuklijst",
-                          "duur": 5
+                        "2": {
+                          "omschrijving":"Kepers in tent verzamelen",
+                          "vaardigheidsniveau": ["chef", "assistent", "voorman"],
+                          "duur": 5,
+                          "tarief": 45
                         }
-                    },
-                    "hulpmiddelen":{},
-                    "materialen":{}
+                  }
                   },
                   "transport, heen":{},
                   "opbouw":{},
@@ -79,50 +62,212 @@
                   "afronding":{}
                 }
               },
-              "intern op voorraad":{},
-              "extern op projectbasis":{},
-              "extern op voorraad":{}
-            },
-            "hoeklijn":{}
+              "platen":{
+                "type":"halffabrikaat",
+                "verplicht": true
+              },
+              "verzwaringen":{
+                "type":"halffabrikaat",
+                "verplicht": false
+              },
+              "uitsparingen":{
+                "type":"halffabrikaat",
+                "verplicht": false
+              },
+              "bekabeling":{
+                "type":"halffabrikaat",
+                "verplicht": true
+              },
+              "randafwerking":{
+                "type":"halffabrikaat",
+                "verplicht": true,
+                "kostprijs voorcalculatie": "(kostprijs Plint) + (kostprijs Hoeklijn)",
+                "bestandsdelen":
+                {
+                  "plint":{
+                  "type":"halffabrikaat",
+                  "verplicht": true,
+                  "kostprijs voorcalculatie": "kostprijs van standaard realisatiemethode",
+                  "toelichting":"Standaard worden plinten per project, intern door CE geproduceerd. Remo merkte op 2 december 2019 op dat het produceren van plinten eventueel ook op voorraad plaats kan vinden.",
+                  "realisatiemethode vastellen": "functie",
+                  "intern op projectbasis":{
+                    "standaardrealisatiemethode": true,
+                    "kostprijs voorcalculatie": "",
+                    "fasen":{
+                      "voorbereiding":{},
+                      "realisatie":{
+                        "toelichting":"Voor ieder project worden nieuwe plinten gezaagd. Na afloop van een project worden de oude plinten weggegooid. Op de stuklijst staat de m1 maat welke exact nodig is. Dit is echter niet de maat welke meegaat naar de beurs. ",
+                        "werkzaamheden":{
+                            "1": {
+                              "omschrijving":"Lezen stuklijst",
+                              "vaardigheidsniveau": ["chef", "assistent", "voorman"],
+                              "duur": 5,
+                              "tarief": 45
+                            },
+                            "2": {
+                              "omschrijving":"Berekenen aantal stroken",
+                              "vaardigheidsniveau": ["chef", "assistent", "voorman"],
+                              "duur": 5,
+                              "tarief": 45
+                            },
+                            "3": {
+                              "omschrijving":"Uit rek halen plaat lakboard (met heftruck?)",
+                              "vaardigheidsniveau": ["timmerman met heftruckrijbewijs"],
+                              "eenheid": "per plaat",
+                              "duur": 5,
+                              "tarief": 45
+                            },
+                            "4": {
+                              "omschrijving":"Bundelen stroken met tape. Bij de meeste stands worden alle stroken in een bundel gebundeld. Alleen bij erg grote stands is er sprake van meerdere bundels.",
+                              "vaardigheidsniveau": ["timmerman"],
+                              "eenheid": "per 10 stroken",
+                              "duur": 5,
+                              "tarief": 45
+                            },
+                            "5": {
+                              "omschrijving":"Sticker op bundel met projectgegevens",
+                              "vaardigheidsniveau": ["timmerman"],
+                              "eenheid": "",
+                              "duur": 5,
+                              "tarief": 45
+                            },
+                            "6": {
+                              "omschrijving":"Tussentijdse opslag in timmerwerkplaats: plaatsen op platen.",
+                              "vaardigheidsniveau": ["timmerman met heftruckrijbewijs"],
+                              "duur": 5,
+                              "tarief": 45
+                            }
+                        },
+                        "hulpmiddelen":{
+                          "1": {
+                            "hulpmiddel":"Heftruck",
+                            "doel": "Uit rek halen lakboard",
+                            "eisen": "Heftruckrijbewijs",
+                            "tarief": 6,
+                            "verbruik": 5
+                          },
+                          "2": {
+                            "hulpmiddel":"Stanleymes",
+                            "doel": "Voor het snijden van de tape",
+                            "eisen": "Interne veiligheidscursus Timmeren",
+                            "tarief": 6,
+                            "verbruik": 5
+                          },
+                          "3": {
+                            "hulpmiddel":"Zaag",
+                            "doel": "Voor het zagen van de pinten uit het plaatmateriaal",
+                            "eisen": "Interne veiligheidscursus Timmeren",
+                            "tarief": 6,
+                            "verbruik": 5
+                          }
+                        },
+                        "materialen":{
+                          "1":{
+                            "artikel id": "",
+                            "omschrijving": "Lakboard ZWART 2440 x 1220 x 3,6",
+                            "aantal": "",
+                            "aantal, toelichting": "benodigde aantal platen om benodigde aantal stroken te zagen."
+                          }
+                        }
+                      },
+                      "transport, heen":{},
+                      "opbouw":{},
+                      "evenement":{},
+                      "demontage":{},
+                      "transport, retour":{},
+                      "logistiek":{},
+                      "afronding":{}
+                    }
+                  },
+                  "intern op voorraad":{
+                    "standaardrealisatiemethode": false
+                  },
+                  "extern op projectbasis":{
+                    "standaardrealisatiemethode": false
+                  },
+                  "extern op voorraad":{
+                    "standaardrealisatiemethode": false
+                  }
+                },
+                  "hoeklijn":{}
+                }
+              },
+              "verlichting in vloer":{},
+              "verlichting in randafwerking":{}
+            }
           },
-          "verlichting in vloer":{},
-          "verlichting in randafwerking":{}
+          "vloerafwerking": {
+            "tapijt, één soort":{},
+            "tapijt, meerdere soorten op kepervloer":{},
+            "één soort HPL op kepervloer":{},
+            "mix van HPL op kepervloer":{},
+            "mix van HPL en tapijt op kepervloer":{},
+            "afwijking":{}
+          }
         },
-        "vloerafwerking": {
-          "tapijt, één soort":{},
-          "tapijt, meerdere soorten op kepervloer":{},
-          "één soort HPL op kepervloer":{},
-          "mix van HPL op kepervloer":{},
-          "mix van HPL en tapijt op kepervloer":{},
-          "afwijking":{}
+        "podium":{
+          "omschrijving":"Podium"
+        },
+        "niet standaardvloer":{
+          "omschrijving":"Niet standaardvloer"
         }
-      },
-      "podium":{
-        "omschrijving":"Podium"
-      },
-      "nNiet standaardvloer":{
-        "omschrijving":"Niet standaardvloer"
       }
+    },
+    "D. Standconstructie":{
+      "categorie":"D"
+    },
+    "E. Verdiepingsconstructie":{
+      "categorie":"E"
+    },
+    "O. Opbouw": {
+      "categorie":"O",
+      "Vervroegde opbouw mogelijk":"",
+      "Startdatum":"",
+      "Einddatum":""
+    },
+    "Q. Event":{
+      "categorie":"Q"
+    },
+    "P. Demontage":{
+      "categorie":"P"
     }
   },
-  "D. Standconstructie":{
-    "categorie":"D"
-  },
-  "E. Verdiepingsconstructie":{
-    "categorie":"E"
-  },
-  "O. Opbouw": {
-    "categorie":"O",
-    "Vervroegde opbouw mogelijk":"",
-    "Startdatum":"",
-    "Einddatum":""
-  },
-  "Event":{
-    "categorie":"Onbekend",
-    "Startdatum":"",
-    "Einddatum":""
-  },
-  "P. Demontage":{
-    "categorie":"P"
+  "projects":{
+    "c20C1259":{
+      "general":{
+        "customer":"Tarkett",
+        "tradeshow":"Domotex"
+      },
+      "a":{},
+      "b":{},
+      "c":{},
+      "d":{},
+      "e":{},
+      "f":{},
+      "g":{},
+      "h":{},
+      "i":{},
+      "j":{},
+      "k":{},
+      "l":{},
+      "m":{},
+      "n":{},
+      "o":{},
+      "p":{},
+      "q":{
+        "dates":{
+          "startdatum":"",
+          "einddatum":""
+        },
+        "stand":{
+          "sideAbOpen":1,
+          "sideBcOpen":1,
+          "sideCdOpen":1,
+          "sideDaOpen":1,
+          "sideAbLength":10,
+          "sideDaLength":6
+        }
+      }
+    }
   }
 }
