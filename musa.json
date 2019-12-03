@@ -1,0 +1,128 @@
+{
+  "A. Opdrachtvoorbereidig, commercieel":{
+    "categorie":"A"
+  },
+  "B. Opdrachtvoorbereidig, technisch":{
+    "categorie":"B"
+  },
+  "C. Vloeren":{
+    "categorie":"C",
+    "vloersoorten":{
+      "geen vloer":{
+        "omschrijving":"Geen vloer"
+      },
+      "tapijttegels op beursvloer":{
+        "omschrijving":"Tapijttegels op beursvloer"
+      },
+      "tapijt op beursvloer":{
+        "omschrijving":"Tapijt op beursvloer"
+      },
+      "hpl op beursvloer":{
+        "omschrijving":"HPL op beursvloer"
+      },
+      "dubbelspaanvloer":{
+        "omschrijving":"Dubbelspaanvloer"
+      },
+      "octanorm vloer":{
+        "omschrijving":"Octanorm vloer"
+      },
+      "kepervloer":{
+        "omschrijving":"Kepervloer",
+        "kepervloer":{
+          "kepers":{
+            "Fasen":{
+              "Voorbereiding":{},
+              "Realisatie":{},
+              "Transport, heen":{},
+              "Opbouw":{},
+              "Evenement":{},
+              "Demontage":{},
+              "Transport, retour":{},
+              "Logistiek":{},
+              "Afronding":{}
+            }
+          },
+          "platen":{},
+          "verzwaringen":{},
+          "uitsparingen":{},
+          "bekabeling":{},
+          "randafwerking":{
+            "plint":{
+              "toelichting":"Standaard worden plinten per project, intern door CE geproduceerd. Remo merkte op 2 december 2019 op dat het produceren van plinten eventueel ook op voorraad plaats kan vinden.",
+              "realisatiemethode vastellen": "functie",
+              "intern op projectbasis":{
+                "fasen":{
+                  "voorbereiding":{},
+                  "realisatie":{
+                    "toelichting":"Voor ieder project worden nieuwe plinten gezaagd. Na afloop van een project worden de oude plinten weggegooid. Op de stuklijst staat de m1 maat welke exact nodig is. Dit is echter niet de maat welke meegaat naar de beurs. ",
+                    "werkzaamheden":{
+                        "spec1": {
+                          "id":"0025",
+                          "omschrijving":"Lezen stuklijst",
+                          "duur": 5
+                        },
+                        "spec2": {
+                          "id":"0025",
+                          "omschrijving":"Lezen stuklijst",
+                          "duur": 5
+                        }
+                    },
+                    "hulpmiddelen":{},
+                    "materialen":{}
+                  },
+                  "transport, heen":{},
+                  "opbouw":{},
+                  "evenement":{},
+                  "demontage":{},
+                  "transport, retour":{},
+                  "logistiek":{},
+                  "afronding":{}
+                }
+              },
+              "intern op voorraad":{},
+              "extern op projectbasis":{},
+              "extern op voorraad":{}
+            },
+            "hoeklijn":{}
+          },
+          "verlichting in vloer":{},
+          "verlichting in randafwerking":{}
+        },
+        "vloerafwerking": {
+          "tapijt, één soort":{},
+          "tapijt, meerdere soorten op kepervloer":{},
+          "één soort HPL op kepervloer":{},
+          "mix van HPL op kepervloer":{},
+          "mix van HPL en tapijt op kepervloer":{},
+          "afwijking":{}
+        }
+      },
+      "podium":{
+        "omschrijving":"Podium"
+      },
+      "nNiet standaardvloer":{
+        "omschrijving":"Niet standaardvloer"
+      }
+    }
+  },
+  "D. Standconstructie":{
+    "categorie":"D"
+  },
+  "E. Verdiepingsconstructie":{
+    "categorie":"E"
+  },
+  "O. Opbouw": {
+    "categorie":"O",
+    "Vervroegde opbouw mogelijk":"",
+    "Startdatum":"",
+    "Einddatum":""
+  },
+  "Event":{
+    "categorie":"Onbekend",
+    "Startdatum":"",
+    "Einddatum":""
+  },
+  "P. Demontage":{
+    "categorie":"P"
+  }
+}
