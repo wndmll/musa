@@ -40,23 +40,104 @@
                     "toelichting":"",
                     "werkzaamheden":{
                         "1": {
-                          "omschrijving":"Lezen stuklijst en controleren maten in de stuklijst. John heeft de indruk dat nog steeds 50% van de maten / kepers in de stuklijst niet correct is (of optimaler kan). John kijkt zelf in de tekening en telt het zelf uit. Als er meerdere timmerlieden bezig zijn met hetzelfde project, geeft hij niet de stuklijst mee maar schrijft hij het op een blaadje. Als John afwijkt van de stuklijst, geeft hij dit altijd door. Omstandigheid met John en Oscar samen bespreken. ",
+                          "omschrijving":"Lezen stuklijst en controleren maten in de stuklijst. ",
+                          "toelichting":"John heeft de indruk dat nog steeds 50% van de maten / kepers in de stuklijst niet correct is (of optimaler kan). John kijkt zelf in de tekening en telt het zelf uit. Als er meerdere timmerlieden bezig zijn met hetzelfde project, geeft hij niet de stuklijst mee maar schrijft hij het op een blaadje. Als John afwijkt van de stuklijst, geeft hij dit altijd door. Omstandigheid met John en Oscar samen bespreken. ",
                           "vaardigheidsniveau": ["chef", "assistent", "voorman"],
                           "duur": 5,
                           "tarief": 45
                         },
                         "2": {
-                          "omschrijving":"Kepers in tent verzamelen",
-                          "vaardigheidsniveau": ["chef", "assistent", "voorman"],
+                          "omschrijving":"Op basis van instuctie Chef Timmeren de kepers in tent verzamelen. Daarvoor moet bundels met kepers open worden gemaakt en de passende kepers apart worden gelegd. Daarbij ontstaan 2 groepen: een groep waarvan de maat meteen in order is en een groep welke op maat moet worden gezaagd. Na het uitnemen van de oorsponkelijke bundels moeten deze weer worden gesloten (met behulp van de hulpmiddelen op de bindkar).",
+                          "toelichting":"Vaak staan er voor de kepers pallets en is een heftruck nodig om deze te verplaatsen. Als er te weinig kepers zijn, wat niet heel vaak kan voorkomen, moet de Timmerman zich bij de Chef Timmeren melden (de chef besteld dan eventueel nieuwe kepers). In de regel worden slechts enkele keren per jaar kepers besteld (meestal voor grote projecten.",
+                          "vaardigheidsniveau": ["timmerman"],
                           "duur": 5,
                           "tarief": 45
+                        },
+                        "3": {
+                          "omschrijving": "Op maat zagen van kepers.",
+                          "toelichting": "",
+                          "vaardigheidsniveau": [],
+                          "duur": 0,
+                          "tarief": 0
+                        },
+                        "4": {
+                          "omschrijving": "Bundelen kepers voor het project. ",
+                          "toelichting": "",
+                          "vaardigheidsniveau": [],
+                          "duur": 0,
+                          "tarief": 0
+                        },
+                        "5": {
+                          "omschrijving": "Voorzien van stickers. ",
+                          "toelichting": "",
+                          "vaardigheidsniveau": [],
+                          "duur": 0,
+                          "tarief": 0
                         }
-                  }
                   },
+                    "hulpmiddelen":{
+                    "1": {
+                      "hulpmiddel":"Heftruck",
+                      "doel": "Verplaatsen van pallets welke in de weg staan.",
+                      "eisen": "Heftruckrijbewijs",
+                      "tarief": 6,
+                      "verbruik": 5
+                    },
+                    "2": {
+                      "hulpmiddel":"Stanleymes",
+                      "doel": "Open snijden van bundels.",
+                      "eisen": "Interne veiligheidscursus Timmeren",
+                      "tarief": 6,
+                      "verbruik": 5
+                    },
+                    "3": {
+                      "hulpmiddel":"Bindkar",
+                      "doel": "Weer dichtbinden van de bundels met kepers.",
+                      "eisen": "Interne veiligheidscursus Timmeren",
+                      "tarief": 6,
+                      "verbruik": 5
+                    },
+                    "4": {
+                      "hulpmiddel":"Zaag",
+                      "doel": "Voor het zagen van de passtukken.",
+                      "eisen": "Interne veiligheidscursus Timmeren",
+                      "tarief": 6,
+                      "verbruik": 5
+                    }
+                  },
+                    "materialen":{
+                      "1":{
+                        "artikel id": "",
+                        "omschrijving": "Volle balken kepervloer (510 cm x 4,7 cm x 9 cm) (voorraad CE)",
+                        "aantal": "1",
+                        "aantal, toelichting": "Volledige kepers"
+                      },
+                      "2":{
+                        "artikel id": "",
+                        "omschrijving": "Passtukken balken kepervloer (voorraad CE)",
+                        "aantal": "1",
+                        "aantal, toelichting": "Passtukken"
+                      },
+                      "3":{
+                        "artikel id": "",
+                        "omschrijving": "Bindband",
+                        "aantal": "1",
+                        "aantal, toelichting": ""
+                      },
+                      "4":{
+                        "artikel id": "",
+                        "omschrijving": "Zegels bindband",
+                        "aantal": "1",
+                        "aantal, toelichting": "Passtukken"
+                      }
+                    }
+                  },
+                  "laden transport heen":{},
                   "transport, heen":{},
                   "opbouw":{},
                   "evenement":{},
                   "demontage":{},
+                  "laden transport retour":{},
                   "transport, retour":{},
                   "logistiek":{},
                   "afronding":{}
@@ -167,6 +248,12 @@
                             "omschrijving": "Lakboard ZWART 2440 x 1220 x 3,6",
                             "aantal": "",
                             "aantal, toelichting": "benodigde aantal platen om benodigde aantal stroken te zagen."
+                          },
+                          "2":{
+                            "artikel id": "",
+                            "omschrijving": "Projectstickers",
+                            "aantal": "1",
+                            "aantal, toelichting": "stuks per bundel plinten."
                           }
                         }
                       },
