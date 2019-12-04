@@ -1,0 +1,32 @@
+{
+  "werkzaamheden": {
+    "1": {
+      "omschrijving": "",
+      "toelichting": "",
+      "situatie":"",
+      "optimalisatie":"",
+      "vaardigheidsniveau": [],
+      "backup":[],
+      "uurcode":"",
+      "duur": 0,
+      "tarief": 0
+    }
+  },
+  "hulpmiddelen": {
+    "1": {
+      "hulpmiddel": "",
+      "doel": "",
+      "eisen": "",
+      "tarief": 0,
+      "verbruik": 0
+    }
+  },
+  "materialen": {
+    "1": {
+      "artikel id": "",
+      "omschrijving": "",
+      "aantal": 0,
+      "aantal, toelichting": ""
+    }
+  }
+}

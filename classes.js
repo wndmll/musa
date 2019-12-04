@@ -23,20 +23,15 @@ class Stand extends TradeshowEdition {
 
   constructor(project) {
     super();
+  }
 
-/*
-    this.customer = customer;
-    this.tradeshow = tradeshow;
-    this.SideAbOpen = ab;
-    this.SideBcOpen = bc;
-    this.SideCdOpen = cd;
-    this.SideDaOpen = da;
-    this.SideAbLength = abL;
-    this.SideDaLength = daL;
+  standType(stand){
+
+    console.log("Hi from inside standType " + JSON.stringify(stand));
 
     var openSides;
 
-    openSides = this.SideAbOpen + this.SideBcOpen + this.SideCdOpen + this.SideDaOpen;
+    openSides = stand.sideAbOpen + stand.sideBcOpen + stand.sideCdOpen + stand.sideDaOpen;
 
     if ( openSides == 4 ) {
       this.type = 'Eiland';
@@ -46,15 +41,28 @@ class Stand extends TradeshowEdition {
       this.type = 'Hoek';
     } else if ( openSides == 1 ) {
       this.type = 'Rij';
+    } else {
+      this.type = 'Onbepaald';
     }
-*/
+
+    console.log("Hi from inside this.type " + this.type);
+
+    return this.type;
+
   }
+
 }
 
+class Floor{
 
-class Plint{
+}
 
-  static lenght(stand) {
+class Plint extends Floor{
+
+  lenght(stand) {
+
+    console.log("Hi from inside Plint");
+    console.log("Hi from inside Plint " + JSON.stringify(stand));
 
     this.lenght = 0;
 
@@ -71,8 +79,18 @@ class Plint{
       this.lenght = this.lenght + stand.sideDaLength;
     }
 
+    console.log("Hi from inside Plint this.lenght " + this.lenght);
+
     return this.lenght;
 
+  }
+
+}
+
+class Tape extends Floor{
+
+  quantity(stand){
+    return stand.sideAbLength*stand.sideDaLength
   }
 
 }

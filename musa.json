@@ -1,13 +1,16 @@
 {
   "formule":{
-    "A. Opdrachtvoorbereidig, commercieel":{
-      "categorie":"A"
+    "a":{
+      "categorie":"A",
+      "omschrijving": "Opdrachtvoorbereidig, commercieel"
     },
-    "B. Opdrachtvoorbereidig, technisch":{
-      "categorie":"B"
+    "b":{
+      "categorie":"B",
+      "omschrijving": "Opdrachtvoorbereidig, technisch"
     },
-    "C. Vloeren":{
+    "c":{
       "categorie":"C",
+      "omschrijving":"Vloeren",
       "vloersoorten":{
         "geen vloer":{
           "omschrijving":"Geen vloer"
@@ -29,7 +32,11 @@
         },
         "kepervloer":{
           "omschrijving":"Kepervloer",
+          "toelichting":"De kepervloer is een cruciaal element van de stand. De werkzaamheden om deze voor te bereiden lijken relatief eenvoudig te zijn (behalve als er sprake is van complicaties zoals verzwaringen of uitsparingen). Bij de opbouw is de vloer meestal één van de eerste elementen welke wordt gebruikt (of de vloer wordt eerst gelegd of de truss gaat als eerste de lucht in). Vaak worden de onderdelen van de vloer ook 'onderin' de vrachtwagen geladen (?). De vloer is dus (bij complexere projecten) in ieder geval één van de zaken welke vroeg tijdens de opbouw aanwezig dienen te zijn.",
+          "bestandsdelen":{
           "kepervloer":{
+            "type":"halffabrikaat",
+            "verplicht": true,
             "bestanddelen":{
               "kepers":{
                 "type":"halffabrikaat",
@@ -40,97 +47,185 @@
                     "toelichting":"",
                     "werkzaamheden":{
                         "1": {
-                          "omschrijving":"Lezen stuklijst en controleren maten in de stuklijst. ",
-                          "toelichting":"John heeft de indruk dat nog steeds 50% van de maten / kepers in de stuklijst niet correct is (of optimaler kan). John kijkt zelf in de tekening en telt het zelf uit. Als er meerdere timmerlieden bezig zijn met hetzelfde project, geeft hij niet de stuklijst mee maar schrijft hij het op een blaadje. Als John afwijkt van de stuklijst, geeft hij dit altijd door. Omstandigheid met John en Oscar samen bespreken. ",
-                          "vaardigheidsniveau": ["chef", "assistent", "voorman"],
+                          "omschrijving":"Lezen stuklijst en controleren maten in de stuklijst. De Chef Timmeren controleert de stuklijst en bepaald de uiteindelijke maten van de kepers. Bij wijzigen geeft de Chef Timmeren dit door aan de werkvoorbereider zodat de werkvoorbereider de stuklijst kan bijwerken. Daarnaast instrueert de Chef de Timmerman welke de kepers gaat voorbereiden. ",
+                          "toelichting":"",
+                          "situatie":"(1) John heeft de indruk dat nog steeds 50% van de maten / kepers in de stuklijst niet correct is (of optimaler kan). John kijkt zelf in de tekening en telt het zelf uit. Daarbij kijkt John onder andere welke richting optimaal is. (2) Als er meerdere timmerlieden bezig zijn met hetzelfde project, geeft hij niet de stuklijst mee maar schrijft hij het op een blaadje. John heeft er slechte ervaringen mee als er meerdere versies van de stuklijst rondzwerven op zijn afdeling. Daarom maakt hij geen kopie van de stuklijst maar schrijft hij deze op een blaadje. ",
+                          "optimalisatie":"De waarden op de stuklijst zouden door de Chef Timmeren één op één overgenomen moeten kunnen worden. Het zou niet nodig moeten zijn dat deze optimalisatieslag door de Chef wordt gemaakt.",
+                          "vaardigheidsniveau": ["chef", "assistent"],
+                          "backup":["voorman"],
+                          "uurcode":"UB3500",
                           "duur": 5,
-                          "tarief": 45
+                          "tarief": 45,
+                          "hulpmiddelen":{
+                            "1": {
+                              "hulpmiddel":"Stuklijst",
+                              "doel": "Opzoeken en controleren aantal kepers per lengte.",
+                              "eisen": "",
+                              "tarief": 0,
+                              "verbruik": 0
+                            }
+                          },
+                          "materialen":{}
                         },
                         "2": {
-                          "omschrijving":"Op basis van instuctie Chef Timmeren de kepers in tent verzamelen. Daarvoor moet bundels met kepers open worden gemaakt en de passende kepers apart worden gelegd. Daarbij ontstaan 2 groepen: een groep waarvan de maat meteen in order is en een groep welke op maat moet worden gezaagd. Na het uitnemen van de oorsponkelijke bundels moeten deze weer worden gesloten (met behulp van de hulpmiddelen op de bindkar).",
-                          "toelichting":"Vaak staan er voor de kepers pallets en is een heftruck nodig om deze te verplaatsen. Als er te weinig kepers zijn, wat niet heel vaak kan voorkomen, moet de Timmerman zich bij de Chef Timmeren melden (de chef besteld dan eventueel nieuwe kepers). In de regel worden slechts enkele keren per jaar kepers besteld (meestal voor grote projecten.",
+                          "omschrijving":"Op basis van de instuctie van de Chef Timmeren moet de aangewezen Timmerman de kepers in de tent verzamelen. Daarvoor moeten de bundels met kepers welke in tent opgeslagen liggen open worden gemaakt. Uit de aanwezig kepers selecteert de Timmerman passende kepers. Deze legt hij apart. Daarbij ontstaan 2 groepen: één groep waarvan de maat meteen in orde is en één groep welke op maat moet worden gezaagd. De kepers welke op maat moeten worden gezaagd, moeten naar de timmerwerkplaats worden vervoerd. Na het uitnemen van de kepers moeten de oorsponkelijke bundels weer worden gesloten. Dit doet de Timmerman met behulp van de hulpmiddelen op de bindkar.",
+                          "toelichting":"Vaak staan er voor de kepers pallets en is een heftruck nodig om deze te verplaatsen. Als er te weinig kepers zijn, wat niet slechts sporadisch voorkomt, moet de Timmerman zich bij de Chef Timmeren melden (de chef besteld dan eventueel nieuwe kepers). In de regel worden slechts enkele keren per jaar kepers besteld (meestal voor grote projecten.",
+                          "optimalisatie":"Waarom wordt er niet, net als bij wanden met een aantal standaardmaten gewerkt? Deze kunnen eventueel qua kleur worden gecodeerd zodat ze snel herkenbaar zijn. Wellicht is er dan soms nog steeds de noodzaak tot passtukken, maar deze wordt misschien wel minder. Bovendien lijkt het pick proces dan veel sneller te gaan.",
                           "vaardigheidsniveau": ["timmerman"],
+                          "uurcode":"UC4100",
                           "duur": 5,
-                          "tarief": 45
+                          "tarief": 45,
+                          "hulpmiddelen":{
+                            "1": {
+                              "hulpmiddel":"Instructie Chef Timmeren",
+                              "doel": "Opgave van te picken aantal balken per lengte.",
+                              "eisen": "Heftruckrijbewijs",
+                              "tarief": 0,
+                              "verbruik": 0
+                            },
+                            "2": {
+                              "hulpmiddel":"Heftruck",
+                              "doel": "Verplaatsen en weer terugzetten van pallets welke toegang tot kepers blokkeren. Vervoeren op maat te zagen kepers naar timmerwerkplaats.",
+                              "eisen": "Heftruckrijbewijs",
+                              "tarief": 6,
+                              "verbruik": 5
+                            },
+                            "3": {
+                              "hulpmiddel":"Stanleymes",
+                              "doel": "Open snijden van bundels.",
+                              "eisen": "Interne veiligheidscursus Timmeren",
+                              "tarief": 6,
+                              "verbruik": 5
+                            },
+                            "4": {
+                              "hulpmiddel":"Bindkar",
+                              "doel": "Weer dichtbinden van de bundels met kepers.",
+                              "eisen": "Interne veiligheidscursus Timmeren",
+                              "tarief": 6,
+                              "verbruik": 5
+                            }
+                          },
+                          "materialen":{
+                            "1":{
+                              "artikel id": "",
+                              "omschrijving": "Volle balken kepervloer (510 cm x 4,7 cm x 9 cm) (voorraad CE)",
+                              "aantalMuza": "",
+                              "aantalWvb":"",
+                              "aantalTimmeren":"",
+                              "aantal, toelichting": "Volledige kepers"
+                            },
+                            "2":{
+                              "artikel id": "",
+                              "omschrijving": "Passtukken balken kepervloer (voorraad CE)",
+                              "aantal": "1",
+                              "aantal, toelichting": "Passtukken"
+                            },
+                            "3":{
+                              "artikel id": "",
+                              "omschrijving": "Bindband",
+                              "aantal": "1",
+                              "aantal, toelichting": ""
+                            },
+                            "4":{
+                              "artikel id": "",
+                              "omschrijving": "Zegels bindband",
+                              "aantal": "1",
+                              "aantal, toelichting": "Passtukken"
+                            }
+                          }
                         },
                         "3": {
                           "omschrijving": "Op maat zagen van kepers.",
-                          "toelichting": "",
+                          "toelichting": "Het is belangrijk dat de werkplek na het zagen onmiddelijk wordt opgeruimd. Kepers langer dan 100 cm worden (op een Europallet?) in de tent bewaard. Kepers korter dan 100 cm worden in een bak in de timmerwerkplaats bewaard (in een bak onder de zaak?). Er korte stukjes ('blokjes') worden in een afvalbak voor hout in de timmerwerkplaats gedeponeerd.",
+                          "optimalisatie": "",
                           "vaardigheidsniveau": [],
+                          "uurcode":"UC4100",
                           "duur": 0,
-                          "tarief": 0
+                          "tarief": 0,
+                          "hulpmiddelen":{
+                            "1": {
+                              "hulpmiddel":"Zaag",
+                              "doel": "Voor het zagen van de passtukken.",
+                              "eisen": "Interne veiligheidscursus Timmeren",
+                              "tarief": 6,
+                              "verbruik": 5
+                            }
+                          },
+                          "materialen":{
+                            "1":{
+                              "artikel id": "",
+                              "omschrijving": "Volle balken kepervloer (510 cm x 4,7 cm x 9 cm) (voorraad CE)",
+                              "aantal": "1",
+                              "aantal, toelichting": "Volledige kepers"
+                            },
+                            "2":{
+                              "artikel id": "",
+                              "omschrijving": "Passtukken balken kepervloer (voorraad CE)",
+                              "aantal": "1",
+                              "aantal, toelichting": "Passtukken"
+                            }
+                          }
                         },
                         "4": {
-                          "omschrijving": "Bundelen kepers voor het project. ",
-                          "toelichting": "",
+                          "omschrijving": "Bundelen kepers voor het project. Kepers worden meestal per 80 tot 100 kepers gebundeld. Bij het bundelen van de kepers wordt gebruik gemaakt van de bindkar. Om kepers van een volle balklengte (510 cm) worden 5 bandjes gebruikt. De kepers worden op een pallet gelegd. Daarbij wordt gebruik gemaakt van pallets van 100 x 275 cm of pallets van 100 x 200 cm. Kepers worden hoogkant op de pallets gelegd. Onderdaan liggen kepers met een volle lengte. Boven zijn er soms omvoldoende kepers om een laag vol te maken. In dat geval worden er tussen de keper (in de andere richting) opvulstukjes geplaatst. Ieder bundel / pallet met kepers dient te worden voorzien van een sticker.",
+                          "toelichting": "Als de kepers door de afdeling Timmeren wordt gebundeld wordt geen krimpfolie gebruikt. Als de kepers door de afdeling Logistiek worden gebundeld worden deze soms ook in krimpfolie verpakt. Volgens John heeft dit geen nut.",
                           "vaardigheidsniveau": [],
+                          "uurcode":"UC4100",
                           "duur": 0,
-                          "tarief": 0
+                          "tarief": 0,
+                          "hulpmiddelen":{},
+                          "materialen":{
+                            "1":{
+                              "artikel id": "",
+                              "omschrijving": "Stickers",
+                              "aantal": "1",
+                              "aantal, toelichting": "Eén sticker per bundel"
+                            },
+                            "2":{
+                              "artikel id": "",
+                              "omschrijving": "Pallets",
+                              "aantal": "",
+                              "aantal, toelichting": "Hoe kan worden berekend hoeveel pallets nodig zijn?"
+                            },
+                            "3":{
+                              "artikel id": "",
+                              "omschrijving": "Opvulstukjes voor tussen kepers op pallet",
+                              "aantal": "",
+                              "aantal, toelichting": "Hoe kan worden berekend hoeveel opvulstukken nodig zijn?"
+                            }
+                          }
                         },
-                        "5": {
-                          "omschrijving": "Voorzien van stickers. ",
+                        "6": {
+                          "omschrijving": "Als de kepers zijn gebundeld en voorzien van stickers, worden de kepers bijvoorkeur opgeslagen in hal 2 (Laden en lossen). Als er in hal 2 geen ruimte is, worden de kepers tijdelijk in de tent opgeslagen. ",
                           "toelichting": "",
+                          "optimalisatie":"John merkte op dat soms wordt vergeten om artikelen te laden welke niet in hal 2 of in de tent worden opgeslagen. Kan dit probleem worden verholpen door te registeren waar artikelen tussentijds worden opgeslagen?",
                           "vaardigheidsniveau": [],
+                          "uurcode":"UC4100",
                           "duur": 0,
-                          "tarief": 0
+                          "tarief": 0,
+                          "hulpmiddelen":{
+                            "1": {
+                              "hulpmiddel":"Heftruck",
+                              "doel": "Naar logistiek brengen van de gelabelde pallets met kepers.",
+                              "eisen": "Heftruckrijbewijs",
+                              "tarief": 6,
+                              "verbruik": 5
+                            }
+                          },
+                          "materialen":{}
+                        },
+                        "7": {
+                          "omschrijving": "De Timmerman moet aan de Chef Timmeren doorgeven dat de werkzaamheden zijn voltooid en waar de kepers tussentijds zijn opgeslagen (in hal 2 of in de tent). De Chef Timmeren noteert dit op de stuklijst.",
+                          "toelichting": "",
+                          "optimalisatie":"",
+                          "vaardigheidsniveau": [],
+                          "uurcode":"UC4100",
+                          "duur": 0,
+                          "tarief": 0,
+                          "hulpmiddelen":{},
+                          "materialen":{}
                         }
-                  },
-                    "hulpmiddelen":{
-                    "1": {
-                      "hulpmiddel":"Heftruck",
-                      "doel": "Verplaatsen van pallets welke in de weg staan.",
-                      "eisen": "Heftruckrijbewijs",
-                      "tarief": 6,
-                      "verbruik": 5
-                    },
-                    "2": {
-                      "hulpmiddel":"Stanleymes",
-                      "doel": "Open snijden van bundels.",
-                      "eisen": "Interne veiligheidscursus Timmeren",
-                      "tarief": 6,
-                      "verbruik": 5
-                    },
-                    "3": {
-                      "hulpmiddel":"Bindkar",
-                      "doel": "Weer dichtbinden van de bundels met kepers.",
-                      "eisen": "Interne veiligheidscursus Timmeren",
-                      "tarief": 6,
-                      "verbruik": 5
-                    },
-                    "4": {
-                      "hulpmiddel":"Zaag",
-                      "doel": "Voor het zagen van de passtukken.",
-                      "eisen": "Interne veiligheidscursus Timmeren",
-                      "tarief": 6,
-                      "verbruik": 5
-                    }
-                  },
-                    "materialen":{
-                      "1":{
-                        "artikel id": "",
-                        "omschrijving": "Volle balken kepervloer (510 cm x 4,7 cm x 9 cm) (voorraad CE)",
-                        "aantal": "1",
-                        "aantal, toelichting": "Volledige kepers"
-                      },
-                      "2":{
-                        "artikel id": "",
-                        "omschrijving": "Passtukken balken kepervloer (voorraad CE)",
-                        "aantal": "1",
-                        "aantal, toelichting": "Passtukken"
-                      },
-                      "3":{
-                        "artikel id": "",
-                        "omschrijving": "Bindband",
-                        "aantal": "1",
-                        "aantal, toelichting": ""
-                      },
-                      "4":{
-                        "artikel id": "",
-                        "omschrijving": "Zegels bindband",
-                        "aantal": "1",
-                        "aantal, toelichting": "Passtukken"
                       }
-                    }
                   },
                   "laden transport heen":{},
                   "transport, heen":{},
@@ -284,6 +379,8 @@
             }
           },
           "vloerafwerking": {
+            "type":"halffabrikaat",
+            "verplicht": true,
             "tapijt, één soort":{},
             "tapijt, meerdere soorten op kepervloer":{},
             "één soort HPL op kepervloer":{},
@@ -291,6 +388,7 @@
             "mix van HPL en tapijt op kepervloer":{},
             "afwijking":{}
           }
+        }
         },
         "podium":{
           "omschrijving":"Podium"
@@ -300,23 +398,25 @@
         }
       }
     },
-    "D. Standconstructie":{
-      "categorie":"D"
+    "d":{
+      "categorie":"D",
+      "omschrijving":"Standconstructie"
     },
-    "E. Verdiepingsconstructie":{
-      "categorie":"E"
+    "e":{
+      "categorie":"E",
+      "omschrijving":"Verdiepingsconstructie"
     },
-    "O. Opbouw": {
+    "o": {
       "categorie":"O",
-      "Vervroegde opbouw mogelijk":"",
-      "Startdatum":"",
-      "Einddatum":""
+      "omschrijving":"Opbouw"
     },
-    "Q. Event":{
-      "categorie":"Q"
+    "q":{
+      "categorie":"Q",
+      "omschrijving":"Event"
     },
-    "P. Demontage":{
-      "categorie":"P"
+    "p":{
+      "categorie":"P",
+      "omschrijving":"Demontage"
     }
   },
   "projects":{
@@ -343,8 +443,11 @@
       "p":{},
       "q":{
         "dates":{
-          "startdatum":"",
-          "einddatum":""
+          "city":"Frankfurt",
+          "country":"Germany",
+          "eventName":"Heimtextil",
+          "startDate":"",
+          "endDate":""
         },
         "stand":{
           "sideAbOpen":1,

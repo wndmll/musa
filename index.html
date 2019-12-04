@@ -1,24 +1,107 @@
 <!DOCTYPE HTML>
 <html>
+
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Musa Test</title>
+  <link rel="stylesheet" href="/css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/bootstrap-reboot.min.css">
 </head>
+
 <body>
 
     <script src="classes.js"></script>
     <script src="helpers.js"></script>
 
-    <div id="test">Hello Musa</div>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+
+    <div class="container">
+
+      <div class="row">
+        <div class="col">
+          <button onclick="gotoPage('jsonView.html')" class="btn btn-primary">JSON View</button>
+        </div>
+      </div>
+
+      <div class="row">
+          <h2>Stand</h2>
+      </div>
+
+      <div class="row">
+          <div class="col">
+            <button onclick="getStandType()" class="btn btn-primary">Type of booth</button>
+            <div id="standType"></div>
+          </div>
+      </div>
+
+      <div class="row">
+          <h2>Floor</h2>
+      </div>
+
+      <div class="row">
+          <div class="col">
+            <button onclick="getPlintLenght()" class="btn btn-primary">Plint berekenen</button>
+            <div id="plintLenght"></div>
+          </div>
+      </div>
+
+      <div class="row">
+          <div class="col">
+            <button onclick="getTapeQuantity()" class="btn btn-primary">Tape quantity</button>
+            <div id="tapeQuantity"></div>
+          </div>
+      </div>
+
+    </div>
 
     <script>
 
-    loadJSON(function(json) {
-      var project = json.projects.c20C1259
-      console.log(project);
-      console.log(project.q.stand);
-      hi = Plint.lenght(project.q.stand);
-      console.log(hi);
-    });
+    var formule
+    var project
+
+    window.onload = function(){
+      loadJSON(function(json) {
+        formule = json.formule
+        project = json.projects.c20C1259
+        console.log(formule);
+        console.log(project);
+      });
+    }
+
+    function getStandType(){
+      document.getElementById('standType').innerHTML = null;
+      a = new Stand;
+      a = a.standType(project.q.stand)
+      document.getElementById('standType').innerHTML = a;
+    }
+
+    function getPlintLenght(){
+      document.getElementById('plintLenght').innerHTML = null;
+      a = new Plint;
+      a = a.lenght(project.q.stand)*1000;
+      // Lakboard ZWART 2440 x 1220 x 3,6 (Vol Pak 150 platen)
+      var defaultLength = 2440;
+      var defaultWidth = 1220;
+      var defaultHeight = 3.6;
+      var requiredPlintQuantity =  Math.ceil(a / defaultLength);
+      document.getElementById('plintLenght').innerHTML = a + ' mm1 <br>' + 'Default board size: ' + defaultLength + ' x ' + defaultWidth + '<br>Required number of plinths ' + requiredPlintQuantity;
+    }
+
+    function getTapeQuantity(){
+      document.getElementById('tapeQuantity').innerHTML = null;
+      a = new Tape;
+      a = a.quantity(project.q.stand);
+      document.getElementById('tapeQuantity').innerHTML = a + ' m1';
+    }
+
+    function gotoPage(page){
+      window.open(page, '_blank');
+    }
 
     </script>
+
 </body>
+
 </html>

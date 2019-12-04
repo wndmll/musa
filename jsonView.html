@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <!-- when using the mode "code", it's important to specify charset utf-8 -->
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+
+    <link href="jsoneditor/dist/jsoneditor.min.css" rel="stylesheet" type="text/css">
+    <script src="jsoneditor/dist/jsoneditor.min.js"></script>
+
+    <script src="helpers.js"></script>
+
+
+</head>
+<body>
+    <div id="jsoneditor" ></div>
+
+    <script>
+    loadJSON(function(json) {
+
+      // create the editor
+      const container = document.getElementById("jsoneditor")
+      const options = {}
+      const editor = new JSONEditor(container, options)
+
+      editor.set(json)
+
+      // get json
+      const updatedJson = editor.get()
+
+    });
+
+
+
+
+    </script>
+</body>
+</html>
