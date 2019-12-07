@@ -1,7 +1,14 @@
 {
-  "name": "musa",
+  "name": "Muza",
   "version": "1.0.0",
+  "description": "Chiaradia Exhibitions Muza",
+  "author": "WNDMLL",
   "dependencies": {
     "jsoneditor": "^7.4.0"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-uglify": "^3.0.2"
   }
 }

@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Musa Test</title>
+  <title>Muza Test</title>
   <link rel="stylesheet" href="/css/bootstrap-grid.min.css">
   <link rel="stylesheet" href="/css/bootstrap.min.css">
   <link rel="stylesheet" href="/css/bootstrap-reboot.min.css">
@@ -12,12 +12,16 @@
 
 <body>
 
-    <script src="classes.js"></script>
-    <script src="helpers.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/helpers.js"></script>
 
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 
     <div class="container">
+
+      <div class="row">
+          <h2>JSON</h2>
+      </div>
 
       <div class="row">
         <div class="col">
@@ -31,8 +35,10 @@
 
       <div class="row">
           <div class="col">
+            <button onclick="getStandShape()" class="btn btn-primary">Shape of booth</button>
             <button onclick="getStandType()" class="btn btn-primary">Type of booth</button>
-            <div id="standType"></div>
+            <div id="standShape">-</div>
+            <div id="standType">-</div>
           </div>
       </div>
 
@@ -42,15 +48,22 @@
 
       <div class="row">
           <div class="col">
+            <button onclick="getFloorLabor()" class="btn btn-primary">Floor labor</button>
+            <div id="floorLabor">-</div>
+          </div>
+      </div>
+
+      <div class="row">
+          <div class="col">
             <button onclick="getPlintLenght()" class="btn btn-primary">Plint berekenen</button>
-            <div id="plintLenght"></div>
+            <div id="plintLenght">-</div>
           </div>
       </div>
 
       <div class="row">
           <div class="col">
             <button onclick="getTapeQuantity()" class="btn btn-primary">Tape quantity</button>
-            <div id="tapeQuantity"></div>
+            <div id="tapeQuantity">-</div>
           </div>
       </div>
 
@@ -60,14 +73,38 @@
 
     var formule
     var project
+    var muza
+    var jmespath
 
     window.onload = function(){
       loadJSON(function(json) {
+        muza = json;
         formule = json.formule
         project = json.projects.c20C1259
         console.log(formule);
         console.log(project);
       });
+
+      jmespathLoad(function(x) {
+        jmespath = x;
+      });
+
+    }
+
+    ////
+
+    function getFloorLabor(){
+      document.getElementById('floorLabor').innerHTML = null;
+      a = new Kepervloer;
+      a = a.laborHours(muza);
+      document.getElementById('floorLabor').innerHTML = a;
+    }
+
+    function getStandShape(){
+      document.getElementById('standShape').innerHTML = null;
+      a = new Stand;
+      a = a.standShape(project.q.stand)
+      document.getElementById('standShape').innerHTML = a;
     }
 
     function getStandType(){
@@ -95,6 +132,8 @@
       a = a.quantity(project.q.stand);
       document.getElementById('tapeQuantity').innerHTML = a + ' m1';
     }
+
+    ////
 
     function gotoPage(page){
       window.open(page, '_blank');
