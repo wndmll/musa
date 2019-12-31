@@ -1,32 +1,38 @@
 {
-  "werkzaamheden": {
+  "omschrijving":"",
+  "toelichting":"",
+  "situatie":"",
+  "optimalisatie":"",
+  "vaardigheidsniveau": [],
+  "backup":[],
+  "uurcode":"",
+  "duur": 0,
+  "volumeAfhankelijk": 0,
+  "tarief": 0,
+  "hulpmiddelen":{
     "1": {
-      "omschrijving": "",
-      "toelichting": "",
-      "situatie":"",
-      "optimalisatie":"",
-      "vaardigheidsniveau": [],
-      "backup":[],
-      "uurcode":"",
-      "duur": 0,
-      "tarief": 0
-    }
-  },
-  "hulpmiddelen": {
-    "1": {
-      "hulpmiddel": "",
+      "hulpmiddel":"",
       "doel": "",
       "eisen": "",
       "tarief": 0,
       "verbruik": 0
     }
   },
-  "materialen": {
-    "1": {
+  "materialen":{
+    "1":{
       "artikel id": "",
       "omschrijving": "",
-      "aantal": 0,
-      "aantal, toelichting": ""
+      "aantalMuza": "",
+      "aantalWvb":"",
+      "aantalTimmeren":"",
+      "aantal, toelichting": "",
+      "aantal, opmerking": "",
+      "gewicht":"",
+      "eenheid gewicht":"",
+      "lengte":"",
+      "breedte":"",
+      "hoogte":"",
+      "eenheid afmeting": ""
     }
   }
 }

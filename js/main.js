@@ -9,7 +9,7 @@ class TradeshowEdition extends Tradeshow {
 }
 
 class Stand extends TradeshowEdition {
-  
+
   constructor(project) {
     super();
   }
@@ -76,12 +76,14 @@ class Kepervloer extends Floor{
         // Bepalen wat voor vorm een stand heeft
   }
 
-  laborHours(formula){
+  laborHours(formula, jmespath){
 
     var kepersFasen = formula.formule.c.vloersoorten.kepervloer.bestandsdelen.kepervloer.bestandsdelen.kepers.fasen;
     console.log(kepersFasen);
     const entries = Object.entries(kepersFasen);
     console.log(entries);
+
+    console.log(jmespath);
 
     var resjjj = jmespath.search(kepersFasen, "*.werkzaamheden.*.duur")
     console.log(resjjj);

@@ -22,9 +22,12 @@ function jmespathLoad(callback) {
   xobj.send(null);
 */
   var client = new XMLHttpRequest();
-  client.open('GET', 'jmespath.min.js');
+  client.open('GET', 'js/jmespath.min.js');
   client.onreadystatechange = function() {
     //alert(client.responseText);
+    if (client.readyState == 4 && client.status == "200") {
+      return client.responseText;
+    }
   }
   client.send();
 

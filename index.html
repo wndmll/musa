@@ -14,6 +14,7 @@
 
     <script src="js/main.js"></script>
     <script src="js/helpers.js"></script>
+    <script src="js/jsoneditor/dist/jsoneditor.min.js"></script>
 
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 
@@ -26,6 +27,7 @@
       <div class="row">
         <div class="col">
           <button onclick="gotoPage('jsonView.html')" class="btn btn-primary">JSON View</button>
+          <button onclick="gotoPage('jsonViewUpdate.html')" class="btn btn-primary">JSON Update</button>
         </div>
       </div>
 
@@ -86,7 +88,9 @@
       });
 
       jmespathLoad(function(x) {
+        console.log("hi");
         jmespath = x;
+        console.log("hi");
       });
 
     }
@@ -96,7 +100,8 @@
     function getFloorLabor(){
       document.getElementById('floorLabor').innerHTML = null;
       a = new Kepervloer;
-      a = a.laborHours(muza);
+      console.log(jmespath)
+      a = a.laborHours(muza, jmespath);
       document.getElementById('floorLabor').innerHTML = a;
     }
 

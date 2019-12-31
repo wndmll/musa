@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <!-- when using the mode "code", it's important to specify charset utf-8 -->
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+
+    <link href="js/jsoneditor/dist/jsoneditor.min.css" rel="stylesheet" type="text/css">
+    <script src="js/jsoneditor/dist/jsoneditor.min.js"></script>
+
+    <script src="js/helpers.js"></script>
+
+
+</head>
+<body>
+    <div id="jsoneditor" ></div>
+
+    <div class="row form-group">
+       <div class="col-md-12">
+          <input type="button" onclick="saveHtml()" value="Save Changes to JSON">
+       </div>
+    </div>
+
+    <script>
+
+
+    loadJSON(function(json) {
+
+      // create the editor
+      const container = document.getElementById("jsoneditor")
+      const options = {}
+      editor = new JSONEditor(container, options)
+
+      editor.set(json)
+
+      // get json
+      const updatedJson = editor.get()
+
+    });
+
+    // Save a JSON document
+    function saveHtml() {
+      let html = [editor.getText()];
+    //  console.log( JSON.stringify(html) );
+      var jsonRes = JSON.parse(html);
+      sendJSON(html);
+    }
+
+
+function sendJSON(html){
+
+            let result = document.querySelector('.result');
+            let name = document.querySelector('#name');
+            let email = document.querySelector('#email');
+
+            // Creating a XHR object
+            let xhr = new XMLHttpRequest();
+            let url = "saveJson.php";
+
+            // open a connection
+            xhr.open("POST", url, true);
+
+            // Set the request header i.e. which type of content you are sending
+            xhr.setRequestHeader("Content-Type", "application/json");
+
+            // Create a state change callback
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+
+                    // Print received data from server
+                    //result.innerHTML = this.responseText;
+
+                }
+            };
+
+            // Converting JSON data to string
+            var data = html;
+
+            // Sending data with the request
+            xhr.send(data);
+        }
+
+
+    </script>
+</body>
+</html>
