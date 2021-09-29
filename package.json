@@ -4,7 +4,7 @@
   "description": "Chiaradia Exhibitions Muza",
   "author": "WNDMLL",
   "dependencies": {
-    "jsoneditor": "^7.4.0"
+    "jsoneditor": "^9.5.6"
   },
   "devDependencies": {
     "gulp": "^4.0.2",
